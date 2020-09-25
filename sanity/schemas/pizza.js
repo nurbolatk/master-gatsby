@@ -1,4 +1,5 @@
 import { FaPizzaSlice as icon } from 'react-icons/fa';
+import PriceInput from '../components/PriceInput';
 
 export default {
   name: 'pizza',
@@ -33,6 +34,7 @@ export default {
       name: 'price',
       type: 'number',
       title: 'Price',
+      inputComponent: PriceInput,
       description: 'Price of the pizza in cents',
       validation: (Rule) => Rule.min(1000).max(50000),
     },
@@ -41,7 +43,6 @@ export default {
       title: 'Toppings',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'topping' }] }],
-      // TODO: Add custom input component
     },
   ],
   preview: {

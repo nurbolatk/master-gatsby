@@ -16,7 +16,19 @@
   "eslintConfig": {
     "extends": [
       "wesbos"
-    ]
+    ],
+    "rules": {
+      "react/jsx-props-no-spreading": 0,
+      "react/prop-types": 0,
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "singleQuote": true,
+          "printWidth": 70
+        }
+      ]
+    }
   },
   "dependencies": {
     "@sanity/base": "1.150.7",
